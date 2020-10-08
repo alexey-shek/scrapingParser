@@ -15,8 +15,9 @@ public class Main {
         // Dokument von URL laden
         Document doc = null;
         try {
-            doc = Jsoup.connect("http://www.pe-gr.de").get();
+            doc = Jsoup.connect("http://www.pe-gr.de/portfolio.htm").get();
             String title = doc.title();
+            String stretchbox1 = doc.getElementById("stretchbox1").outerHtml();
 
             System.out.println("Title: "+title);
 
