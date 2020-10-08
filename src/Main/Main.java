@@ -10,11 +10,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        Auto a1 = new Auto();
         // Dokument von URL laden
         Document doc = null;
         try {
-            doc = Jsoup.connect("https://www.l3x4.de").get();
+            doc = Jsoup.connect("http://www.pe-gr.de").get();
             String title = doc.title();
+
             System.out.println("Title: "+title);
 
             Elements links = doc.select("a[href]");
